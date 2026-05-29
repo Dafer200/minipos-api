@@ -6,16 +6,16 @@ export declare class StudentsController {
         fullName: string;
         email: string;
     }): Promise<{
+        id: number;
         fullName: string;
         email: string;
         createdAt: Date;
-        id: number;
     }>;
     findAll(): Promise<{
+        id: number;
         fullName: string;
         email: string;
         createdAt: Date;
-        id: number;
     }[]>;
     detail(id: number): Promise<{
         Profile: {
@@ -25,10 +25,10 @@ export declare class StudentsController {
             Address: string | null;
         } | null;
     } & {
+        id: number;
         fullName: string;
         email: string;
         createdAt: Date;
-        id: number;
     }>;
     createOrUpdateProfile(id: number, body: {
         phone?: string;
@@ -43,10 +43,10 @@ export declare class StudentsController {
         courseId: number;
     }): Promise<{
         student: {
+            id: number;
             fullName: string;
             email: string;
             createdAt: Date;
-            id: number;
         };
         course: {
             id: number;
@@ -57,9 +57,9 @@ export declare class StudentsController {
     } & {
         id: number;
         studentId: number;
+        courseId: number;
         status: import("@prisma/client").$Enums.EnrollmentStatus;
         enrolledAt: Date;
-        courseId: number;
     }>;
     studentEnrollments(id: number): Promise<{
         enrollments: ({
@@ -72,14 +72,14 @@ export declare class StudentsController {
         } & {
             id: number;
             studentId: number;
+            courseId: number;
             status: import("@prisma/client").$Enums.EnrollmentStatus;
             enrolledAt: Date;
-            courseId: number;
         })[];
     } & {
+        id: number;
         fullName: string;
         email: string;
         createdAt: Date;
-        id: number;
     }>;
 }
