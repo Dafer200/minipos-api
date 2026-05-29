@@ -65,6 +65,7 @@ let AuthService = class AuthService {
             data: {
                 fullName: dto.fullName,
                 email: dto.email,
+                social_url: dto.social_url,
                 password: hashed,
             },
         });
@@ -88,6 +89,7 @@ let AuthService = class AuthService {
                 id: user.id,
                 email: user.email,
                 fullName: user.fullName,
+                social_url: user.social_url,
             },
         };
     }

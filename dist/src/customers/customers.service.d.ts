@@ -5,36 +5,36 @@ export declare class CustomersService {
     private readonly prisma;
     constructor(prisma: PrismaService);
     create(dto: CreateCustomerDto): Promise<{
-        id: number;
         fullName: string;
         email: string;
         phone: string | null;
         isActive: boolean;
         createdAt: Date;
+        id: number;
     }>;
     findAll(): Promise<{
-        id: number;
         fullName: string;
         email: string;
         phone: string | null;
         isActive: boolean;
         createdAt: Date;
+        id: number;
     }[]>;
     findOne(id: number): Promise<{
-        id: number;
         fullName: string;
         email: string;
         phone: string | null;
         isActive: boolean;
         createdAt: Date;
+        id: number;
     }>;
     update(id: number, dto: UpdateCustomerDto): Promise<{
-        id: number;
         fullName: string;
         email: string;
         phone: string | null;
         isActive: boolean;
         createdAt: Date;
+        id: number;
     }>;
     remove(id: number): Promise<void>;
 }
